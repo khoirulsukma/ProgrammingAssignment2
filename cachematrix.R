@@ -1,5 +1,8 @@
+#Lexical Scooping Assignment####################
 setwd("E:/Kursus R/Coursera/week 3/ProgrammingAssignment2")
-getwd()
+
+#I simply change the "mean" function to "solve" function
+#I also change the setmean/getmean to setinverse/getinverse
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -13,8 +16,6 @@ makeCacheMatrix <- function(x = matrix()) {
          setinverse = setinverse,
          getinverse = getinverse)
 }
-
-
 
 cacheSolve <- function(x, ...) {
     m <- x$getinverse()
