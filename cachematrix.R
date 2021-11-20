@@ -29,6 +29,7 @@ cacheSolve <- function(x, ...) {
     m
 }
 
+#Testing with data
 matrix1 <- matrix(rnorm(1:25), 5,5)
 m1 <- makeCacheMatrix(matrix1)
 cacheSolve(m1)
