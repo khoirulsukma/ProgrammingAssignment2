@@ -11,7 +11,7 @@ makeCacheMatrix <- function(x = matrix()) {
     }
     get <- function() x
     setinverse <- function(solve) m <<- solve
-    getinverse <- function() s
+    getinverse <- function() m
     list(set = set, get = get,
          setinverse = setinverse,
          getinverse = getinverse)
@@ -28,3 +28,7 @@ cacheSolve <- function(x, ...) {
     x$setinverse(m)
     m
 }
+
+matrix1 <- matrix(rnorm(1:25), 5,5)
+m1 <- makeCacheMatrix(matrix1)
+cacheSolve(m1)
