@@ -3,7 +3,9 @@ setwd("E:/Kursus R/Coursera/week 3/ProgrammingAssignment2")
 
 #I simply change the "mean" function to "solve" function
 #I also change the setmean/getmean to setinverse/getinverse
+
 makeCacheMatrix <- function(x = matrix()) {
+    
     m <- NULL
     set <- function(y) {
         x <<- y
@@ -18,6 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 cacheSolve <- function(x, ...) {
+    
     m <- x$getinverse()
     if(!is.null(m)) {
         message("getting inversed matrix")
